@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDI / Termite Inspection | From The Ground Up Inspections | Southeast Texas</title>
+  <meta name="description" content="Wood destroying insect (WDI) and termite inspections in Southeast Texas. TREC licensed. Required for VA and FHA loans. Beaumont, Port Neches & the Golden Triangle.">
+  <link rel="canonical" href="https://www.ftguinspections.com/wdi-termite.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#72867F;--blue:#74A2B1;--light-blue:#BCD9DF;--yellow:#D1C787;--yellow-dark:#b8a855;--brown:#B9926F;--white:#ffffff;--off-white:#F8F7F4;--dark:#1a1a1a;--text:#3a3a3a;}
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+    body{font-family:'Montserrat',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--green),var(--blue),var(--yellow));z-index:9999;transition:width 0.2s ease;border-radius:0 2px 2px 0;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);border-bottom:1px solid rgba(114,134,127,0.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow 0.3s;}
+    nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,0.09);}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:72px;}
+    .nav-logo img{height:48px;width:auto;display:block;}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+    .nav-links a{font-size:13px;font-weight:600;letter-spacing:0.04em;color:var(--green);text-decoration:none;transition:color 0.2s;position:relative;}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--yellow);transform:scaleX(0);transition:transform 0.2s;border-radius:2px;}
+    .nav-links a:hover::after{transform:scaleX(1);}.nav-links a:hover{color:var(--dark);}
+    .nav-dropdown{position:relative;}
+    .dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:white;border:1px solid rgba(114,134,127,0.12);border-radius:8px;padding:8px 0;min-width:250px;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,0.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all 0.2s;}
+    .nav-dropdown:hover .dropdown-menu{opacity:1;pointer-events:auto;transform:translateY(0);}
+    .dropdown-menu a{display:block;padding:11px 22px;font-size:12px;color:var(--text)!important;text-decoration:none;transition:all 0.15s;}
+    .dropdown-menu a::after{display:none!important;}.dropdown-menu a:hover{background:#f5f5f5;color:var(--green)!important;}
+    .nav-cta{background:#D1C787!important;color:#1a1a1a!important;padding:11px 22px!important;border-radius:6px!important;font-size:12px!important;font-weight:800!important;letter-spacing:0.08em!important;text-transform:uppercase!important;border:2px solid #D1C787!important;transition:all 0.2s!important;white-space:nowrap;box-shadow:0 2px 8px rgba(209,199,135,0.4)!important;}
+    .nav-cta:hover{background:#b8a855!important;border-color:#b8a855!important;transform:translateY(-1px)!important;}
+    .nav-cta::after{display:none!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--green);border-radius:2px;transition:all 0.3s;}
+    .mobile-cta-bar{display:none;position:fixed;top:72px;left:0;right:0;z-index:999;background:#f0f0f0;border-bottom:1px solid rgba(0,0,0,0.08);padding:10px 16px;gap:10px;}
+    .mobile-cta-call,.mobile-cta-book{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:12px 16px;border-radius:6px;text-decoration:none;white-space:nowrap;}
+    .mobile-cta-call{background:#1a1a1a!important;color:#fff!important;border:2px solid #1a1a1a!important;}
+    .mobile-cta-book{background:#D1C787!important;color:#1a1a1a!important;border:2px solid #D1C787!important;}
+    .floating-cta{position:fixed;bottom:32px;right:32px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+    .floating-cta-label{background:var(--dark);color:white;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;opacity:0;transform:translateX(10px);transition:all 0.3s;white-space:nowrap;}
+    .floating-cta:hover .floating-cta-label{opacity:1;transform:translateX(0);}
+    .floating-btn{width:64px;height:64px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(209,199,135,0.6);transition:all 0.3s;animation:pulse-cta 2.5s ease-in-out infinite;font-size:26px;}
+    .floating-btn:hover{transform:scale(1.12);animation:none;}
+    @keyframes pulse-cta{0%,100%{box-shadow:0 6px 24px rgba(209,199,135,0.5);transform:scale(1);}50%{box-shadow:0 6px 36px rgba(209,199,135,0.85),0 0 0 10px rgba(209,199,135,0.15);transform:scale(1.05);}}
+    .page-hero{background:var(--green);padding:110px 40px 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 25 L55 50 L5 50 L5 25 Z' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E");background-size:60px 60px;}
+    .page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+    .page-hero-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:14px;display:block;}
+    .page-hero h1{font-size:clamp(32px,4.5vw,56px);font-weight:900;color:white;line-height:1.08;margin-bottom:18px;}
+    .page-hero h1 span{color:var(--yellow);display:block;}
+    .page-hero-sub{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.75;margin-bottom:32px;}
+    .hero-cta-group{display:flex;flex-direction:column;gap:12px;margin-bottom:20px;}
+    .btn-gold{display:flex;align-items:center;justify-content:center;gap:10px;background:#D1C787;color:#1a1a1a;font-size:14px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:18px 36px;border-radius:6px;text-decoration:none;border:2px solid #D1C787;transition:all 0.2s;box-shadow:0 4px 16px rgba(209,199,135,0.4);}
+    .btn-gold:hover{background:#b8a855;border-color:#b8a855;transform:translateY(-2px);}
+    .btn-ghost{display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,0.1);color:white;font-size:14px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:18px 36px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.35);transition:all 0.2s;}
+    .btn-ghost:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.65);}
+    .hero-pills{display:flex;flex-wrap:wrap;gap:10px;}
+    .hero-pill{font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:6px 14px;border-radius:100px;}
+    .hero-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:36px;backdrop-filter:blur(4px);}
+    .hero-card-title{font-size:12px;font-weight:700;color:var(--yellow);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:22px;}
+    .hero-checklist{list-style:none;display:flex;flex-direction:column;gap:13px;}
+    .hero-checklist li{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:rgba(255,255,255,0.85);line-height:1.5;}
+    .hero-checklist li::before{content:'✓';color:var(--yellow);font-weight:800;font-size:13px;flex-shrink:0;margin-top:1px;}
+    section{padding:80px 40px;}
+    .section-inner{max-width:1200px;margin:0 auto;}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;display:block;}
+    .section-title{font-size:clamp(26px,3.5vw,42px);font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:16px;}
+    .section-title span{color:var(--green);}
+    .section-sub{font-size:15px;color:#777;line-height:1.75;max-width:680px;}
+    .off-bg{background:var(--off-white);}.white-bg{background:white;}.green-bg{background:var(--green);}
+    .green-bg .section-label{color:var(--yellow);}.green-bg .section-title{color:white;}.green-bg .section-title span{color:var(--yellow);}.green-bg .section-sub{color:rgba(255,255,255,0.72);}
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+    .info-card{background:white;border:1px solid rgba(114,134,127,0.12);border-radius:12px;padding:28px 24px;transition:all 0.25s;}
+    .info-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08);border-color:var(--green);}
+    .card-icon{width:48px;height:48px;background:var(--light-blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+    .info-card h3{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    .info-card p{font-size:13px;color:#777;line-height:1.6;}
+    .dark-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+    .dark-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:28px 24px;transition:all 0.25s;}
+    .dark-card:hover{background:rgba(255,255,255,0.12);}
+    .dark-card-icon{width:48px;height:48px;background:rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+    .dark-card h3{font-size:14px;font-weight:700;color:white;margin-bottom:8px;}
+    .dark-card p{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .feature-list{display:flex;flex-direction:column;gap:24px;margin-top:32px;}
+    .feature-item{display:flex;gap:16px;align-items:flex-start;}
+    .feature-icon{width:42px;height:42px;background:rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+    .feature-item h4{font-size:14px;font-weight:700;color:white;margin-bottom:5px;}
+    .feature-item p{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;}
+    .stat-box{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+    .stat-item{text-align:center;}
+    .stat-num{font-size:42px;font-weight:800;color:var(--yellow);line-height:1;display:block;margin-bottom:6px;}
+    .stat-lbl{font-size:11px;font-weight:600;color:rgba(255,255,255,0.6);letter-spacing:0.08em;text-transform:uppercase;}
+    .faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px;max-width:820px;}
+    .faq-item{background:white;border:1px solid rgba(114,134,127,0.12);border-radius:10px;overflow:hidden;}
+    .faq-q{width:100%;background:none;border:none;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--dark);text-align:left;gap:16px;}
+    .faq-q:hover{color:var(--green);}
+    .faq-arrow{font-size:18px;transition:transform 0.3s;flex-shrink:0;color:var(--green);}
+    .faq-item.open .faq-arrow{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
+    .faq-a.open{max-height:400px;}
+    .faq-a p{padding:0 24px 22px;font-size:13px;color:#777;line-height:1.75;}
+    .cta-band{background:var(--yellow);padding:90px 40px;position:relative;overflow:hidden;}
+    .cta-band::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:rgba(255,255,255,0.15);border-radius:50%;}
+    .cta-band-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+    .cta-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(26,26,26,0.55);margin-bottom:16px;}
+    .cta-band h2{font-size:clamp(30px,5vw,54px);font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:16px;}
+    .cta-band>div>p{font-size:16px;color:rgba(26,26,26,0.65);margin-bottom:40px;}
+    .cta-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+    .btn-dark{display:inline-flex;align-items:center;gap:10px;background:#1a1a1a;color:white;font-size:14px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:18px 36px;border-radius:6px;text-decoration:none;border:2px solid #1a1a1a;transition:all 0.2s;box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+    .btn-dark:hover{background:#333;border-color:#333;transform:translateY(-2px);}
+    .btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#1a1a1a;font-size:14px;font-weight:700;padding:18px 36px;border-radius:6px;text-decoration:none;border:2px solid rgba(26,26,26,0.35);transition:all 0.2s;}
+    .btn-outline:hover{border-color:#1a1a1a;transform:translateY(-2px);}
+    .cta-proof{margin-top:24px;font-size:12px;color:rgba(26,26,26,0.5);font-weight:500;}
+    footer{background:#111;color:rgba(255,255,255,0.65);padding:70px 40px 40px;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:52px;}
+    .footer-brand img{height:44px;margin-bottom:18px;filter:brightness(0) invert(1);}
+    .footer-brand p{font-size:13px;line-height:1.8;margin-bottom:18px;}
+    .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;margin-bottom:10px;transition:color 0.2s;}
+    .footer-contact a:hover{color:var(--yellow);}
+    .footer-col h4{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:white;margin-bottom:18px;}
+    .footer-col ul{list-style:none;}
+    .footer-col ul li{margin-bottom:9px;}
+    .footer-col ul li a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:13px;transition:color 0.2s;}
+    .footer-col ul li a:hover{color:var(--yellow);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+    .footer-bottom p{font-size:12px;}
+    .footer-creds{display:flex;gap:10px;flex-wrap:wrap;}
+    .cred-badge{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--yellow);background:rgba(209,199,135,0.1);padding:5px 12px;border-radius:4px;border:1px solid rgba(209,199,135,0.2);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:900px){
+      .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:white;flex-direction:column;padding:16px 0;border-bottom:1px solid rgba(114,134,127,0.12);gap:0;box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+      .nav-links.open{display:flex;}.nav-links li{width:100%;}
+      .nav-links>li>a{display:block;padding:13px 32px;font-size:14px;}
+      .dropdown-menu{position:static;opacity:1;pointer-events:auto;transform:none;box-shadow:none;border:none;border-radius:0;padding-left:16px;background:var(--off-white);}
+      .hamburger{display:flex;}.mobile-cta-bar{display:flex;}.floating-cta{display:none;}
+      .page-hero-inner,.two-col{grid-template-columns:1fr;}
+      .cards-grid,.dark-cards-grid{grid-template-columns:1fr 1fr;}
+      .stat-box{grid-template-columns:1fr 1fr;}
+      .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+    }
+    @media(max-width:600px){
+      section{padding:60px 20px;}.page-hero{padding:100px 20px 60px;}
+      .cards-grid,.dark-cards-grid{grid-template-columns:1fr;}
+      .stat-box{grid-template-columns:1fr 1fr;}
+      .footer-top{grid-template-columns:1fr;}
+      .cta-actions{flex-direction:column;align-items:stretch;}
+    }
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="From The Ground Up Inspections"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="buyers-inspection.html">Buyer's Inspection</a>
+          <a href="sellers-inspection.html">Seller's Pre-Listing Inspection</a>
+          <a href="new-construction-inspection.html">New Construction Phase</a>
+          <a href="commercial-inspection.html">Commercial Inspection</a>
+          <a href="warranty-inspection.html">11-Month Warranty Inspection</a>
+          <a href="pool-spa-inspection.html">Pool &amp; Spa Inspection</a>
+          <a href="sewer-scope-inspection.html">Sewer Scope Inspection</a>
+          <a href="well-septic-inspection.html">Well &amp; Septic Inspection</a>
+          <a href="water-testing.html">Water Sample Testing</a>
+          <a href="wdi-termite.html">WDI / Termite Inspection</a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="service-area.html">Service Area</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" class="nav-cta">📅 BOOK INSPECTION</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-cta-bar">
+  <a href="tel:4093639868" class="mobile-cta-call">📞 CALL NOW</a>
+  <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" class="mobile-cta-book">📅 BOOK INSPECTION</a>
+</div>
+<div class="floating-cta">
+  <div class="floating-cta-label">Schedule Inspection</div>
+  <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" class="floating-btn" title="Book Inspection">📅</a>
+</div>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <span class="page-hero-label">WDI / Termite Inspection</span>
+      <h1>Southeast Texas Termites<span> Are Not Optional.</span></h1>
+      <p class="page-hero-sub">Southeast Texas has some of the most aggressive termite pressure in the United States. Subterranean termites, Formosan termites, and other wood-destroying insects thrive in SETX heat and humidity. A WDI inspection is required for VA and FHA loans — and critical for every buyer.</p>
+      <div class="hero-cta-group">
+        <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" class="btn-gold">📅 BOOK YOUR INSPECTION</a>
+        <a href="tel:4093639868" class="btn-ghost">📞 CALL (409) 363-9868</a>
+      </div>
+      <div class="hero-pills">
+        <span class="hero-pill">TREC #7259-PI</span>
+        <span class="hero-pill">Veteran-Owned</span>
+        <span class="hero-pill">20+ Years Experience</span>
+        <span class="hero-pill">Reports in 24 Hours</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">What's Included</div>
+      <ul class="hero-checklist">
+        <li>Licensed WDI inspection</li>
+        <li>Subterranean termite identification</li>
+        <li>Formosan termite evaluation</li>
+        <li>Wood-destroying beetle assessment</li>
+        <li>Evidence of prior infestation documented</li>
+        <li>Active vs. inactive infestation noted</li>
+        <li>Visible structural damage documented</li>
+        <li>Moisture conditions that attract WDI</li>
+        <li>TREC official WDI report form</li>
+        <li>VA and FHA compliant documentation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="off-bg"><div class="section-inner">
+    <span class="section-label reveal">What We Inspect For</span>
+    <h2 class="section-title reveal">Southeast Texas Has Some of the<span> Worst Termite Pressure in the U.S.</span></h2>
+    <p class="section-sub reveal">The Gulf Coast climate — humid, warm, and wet — is ideal for wood-destroying insects. Formosan termites alone can destroy a home's structural framing within years of infestation. Every buyer in the Golden Triangle should have a WDI inspection.</p>
+    <div class="cards-grid">
+      <div class="info-card reveal"><div class="card-icon">🐜</div><h3>Subterranean Termites</h3><p>The most common termite in Southeast Texas. Colonies live underground and build mud tubes to reach wood above ground. Evidence of tubes, swarmers, and damaged wood documented in all accessible areas.</p></div>
+      <div class="info-card reveal"><div class="card-icon">⚠️</div><h3>Formosan Termites</h3><p>Formosan subterranean termites are one of the most destructive invasive species in the United States — and highly prevalent in coastal Southeast Texas. Larger colonies and more aggressive feeding than native species.</p></div>
+      <div class="info-card reveal"><div class="card-icon">🪲</div><h3>Wood-Destroying Beetles</h3><p>Old house borers, powderpost beetles, and other wood-boring insects attack structural lumber, hardwood flooring, and furniture. Exit holes and frass (waste material) are documented during inspection.</p></div>
+      <div class="info-card reveal"><div class="card-icon">💧</div><h3>Moisture Conditions</h3><p>Wood-destroying insects follow moisture. High moisture wood — from leaks, condensation, or grade issues — attracts and sustains infestations. Moisture contributors are identified as part of the WDI evaluation.</p></div>
+      <div class="info-card reveal"><div class="card-icon">🏗️</div><h3>Structural Damage</h3><p>Visible structural damage from WDI activity — damaged sill plates, floor joists, wall framing, and roof components — is documented and photographed for your report and any required remediation estimates.</p></div>
+      <div class="info-card reveal"><div class="card-icon">📋</div><h3>Official TREC WDI Report</h3><p>FTGU provides the official Texas WDI report form accepted by VA, FHA, and conventional lenders — documenting current evidence, prior treatment history, and observable damage in the format lenders require.</p></div>
+    </div>
+  </div></section>
+  <section class="green-bg"><div class="section-inner">
+    <span class="section-label">Loan Requirements</span>
+    <h2 class="section-title reveal">WDI Is Required for<span> VA &amp; FHA Loans.</span></h2>
+    <p class="section-sub reveal">VA and FHA lenders require a WDI inspection on all properties in high-risk termite areas — and Southeast Texas is among the highest-risk regions in the country. Don't wait for your lender to flag it.</p>
+    <div class="dark-cards-grid" style="margin-top:48px;">
+      <div class="dark-card reveal"><div class="dark-card-icon">🎖️</div><h3>VA Loan Requirement</h3><p>VA loans require a WDI inspection in Texas. Any active infestation or significant damage must be remediated before loan approval. The seller typically bears the cost of treatment.</p></div>
+      <div class="dark-card reveal"><div class="dark-card-icon">🏠</div><h3>FHA Loan Requirement</h3><p>FHA loans require WDI inspection in designated high-risk termite zones. Southeast Texas is fully within this zone. Active infestation findings must be treated and re-inspected before closing.</p></div>
+      <div class="dark-card reveal"><div class="dark-card-icon">🤝</div><h3>Conventional &amp; Cash Buyers</h3><p>Even without a loan requirement, WDI inspection is strongly recommended for every Southeast Texas buyer. Treatment costs run $800–$3,000+. Structural damage repairs are far more expensive.</p></div>
+    </div>
+  </div></section>
+<section class="off-bg">
+  <div class="section-inner">
+    <span class="section-label reveal">Common Questions</span>
+    <h2 class="section-title reveal">WDI / Termite Inspection <span>FAQ</span></h2>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">What's the difference between a WDI inspection and a termite treatment? <span class="faq-arrow">▾</span></button><div class="faq-a"><p>A WDI inspection is an evaluation — Troy documents evidence of wood-destroying insects, prior treatment, and visible damage. Treatment is performed by a licensed pest control operator. FTGU is also a business partner in Champion Termite & Pest Control if treatment is needed.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Is a WDI inspection the same as a termite inspection? <span class="faq-arrow">▾</span></button><div class="faq-a"><p>The terms are often used interchangeably, but WDI (Wood-Destroying Insect) is the official TREC term. A WDI inspection covers termites, wood-destroying beetles, and other insects — not just termites.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">How long does a WDI inspection take? <span class="faq-arrow">▾</span></button><div class="faq-a"><p>A standalone WDI inspection typically takes 45–60 minutes depending on home size and accessibility. Combined with a full home inspection it adds minimal additional time.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">What if the inspection finds active termites? <span class="faq-arrow">▾</span></button><div class="faq-a"><p>Active infestation findings are documented in the official WDI report. For VA and FHA loans, treatment is required before closing. For conventional and cash buyers, the findings provide grounds to request seller-paid treatment or a price reduction.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Do you treat termites as well as inspect? <span class="faq-arrow">▾</span></button><div class="faq-a"><p>FTGU is a business partner in Champion Termite & Pest Control, a licensed pest control company serving Southeast Texas. If treatment is needed following a WDI inspection, we can connect you directly with the Champion team.</p></div></div>
+    </div>
+  </div>
+</section>
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <p class="cta-eyebrow">Don't Wait — Schedule Today</p>
+    <h2>Schedule Your WDI Inspection Today.</h2>
+    <p>Available 7 days a week · Reports within 24 hours · Serving Southeast Texas since 2004</p>
+    <div class="cta-actions">
+      <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" class="btn-dark">📅 BOOK INSPECTION</a>
+      <a href="tel:4093639868" class="btn-outline">📞 CALL NOW</a>
+    </div>
+    <p class="cta-proof">Schedule in 60 seconds · No commitment · Instant confirmation</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="From The Ground Up Inspections">
+        <p>Veteran-owned home inspection serving Southeast Texas since 2004. TREC License #7259-PI. Clear reports you can trust.</p>
+        <div class="footer-contact">
+          <a href="tel:4093639868">📞 CALL NOW</a>
+          <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank">📅 BOOK INSPECTION</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="buyers-inspection.html">Buyer's Inspection</a></li>
+        <li><a href="sellers-inspection.html">Pre-Listing Inspection</a></li>
+        <li><a href="new-construction-inspection.html">New Construction</a></li>
+        <li><a href="commercial-inspection.html">Commercial</a></li>
+        <li><a href="warranty-inspection.html">11-Month Warranty</a></li>
+        <li><a href="pool-spa-inspection.html">Pool &amp; Spa</a></li>
+        <li><a href="sewer-scope-inspection.html">Sewer Scope</a></li>
+        <li><a href="well-septic-inspection.html">Well &amp; Septic</a></li>
+        <li><a href="water-testing.html">Water Testing</a></li>
+        <li><a href="wdi-termite.html">WDI / Termite</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="service-area.html">Service Area</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Service Area</h4><ul>
+        <li><a href="service-area.html">Beaumont</a></li>
+        <li><a href="service-area.html">Port Neches</a></li>
+        <li><a href="service-area.html">Port Arthur</a></li>
+        <li><a href="service-area.html">Nederland</a></li>
+        <li><a href="service-area.html">Orange</a></li>
+        <li><a href="service-area.html">Lumberton</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 From The Ground Up Inspections · Port Neches, TX · TREC #7259-PI · <a href="tel:4093639868" style="color:var(--yellow);text-decoration:none;">(409) 363-9868</a></p>
+      <div class="footer-creds"><span class="cred-badge">TREC #7259-PI</span><span class="cred-badge">Veteran-Owned</span><span class="cred-badge">A+ BBB</span><span class="cred-badge">InterNACHI</span></div>
+    </div>
+  </div>
+</footer>
+<script>
+  const bar=document.getElementById('progress-bar');let w=0;
+  const iv=setInterval(()=>{w+=Math.random()*20;if(w>=90){clearInterval(iv);w=90;}bar.style.width=w+'%';},120);
+  window.addEventListener('load',()=>{clearInterval(iv);bar.style.width='100%';setTimeout(()=>{bar.style.opacity='0';bar.style.transition='opacity 0.4s';},300);});
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20);});
+  function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+  function toggleFaq(btn){const item=btn.closest('.faq-item');const answer=item.querySelector('.faq-a');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-a').classList.remove('open');});if(!isOpen){item.classList.add('open');answer.classList.add('open');}}
+  const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);observer.unobserve(entry.target);}});},{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
