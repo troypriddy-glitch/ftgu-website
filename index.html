@@ -178,7 +178,7 @@
     ══════════════════════════════════ */
     .hero {
       min-height: 100vh;
-      background: var(--green);
+      background: linear-gradient(to right, rgba(30,45,40,0.82) 0%, rgba(30,45,40,0.55) 60%, rgba(30,45,40,0.35) 100%), url('ftgu_hero_v4.jpg') center center / cover no-repeat;
       display: flex;
       align-items: center;
       position: relative;
@@ -188,7 +188,7 @@
     .hero::before {
       content:''; position:absolute; top:-20%; right:-10%;
       width:70vw; height:120%;
-      background: rgba(116,162,177,0.1);
+      background: rgba(116,162,177,0.05);
       border-radius:60% 40% 50% 50%;
       transform:rotate(-15deg);
     }
