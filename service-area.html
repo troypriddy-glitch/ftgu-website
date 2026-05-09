@@ -23,7 +23,7 @@
     .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--yellow);transform:scaleX(0);transition:transform 0.2s;border-radius:2px;}
     .nav-links a:hover::after{transform:scaleX(1);}.nav-links a:hover{color:var(--dark);}
     .nav-dropdown{position:relative;}
-    .dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:white;border:1px solid rgba(114,134,127,0.12);border-radius:8px;padding:8px 0;min-width:250px;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,0.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all 0.2s;}
+    .dropdown-menu{position:absolute;top:100%;left:0;background:white;border:1px solid rgba(114,134,127,0.12);border-radius:0 0 8px 8px;padding:10px 0 8px;min-width:250px;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,0.1);opacity:0;pointer-events:none;transform:translateY(0);transition:opacity 0.2s;}
     .nav-dropdown:hover .dropdown-menu{opacity:1;pointer-events:auto;transform:translateY(0);}
     .dropdown-menu a{display:block;padding:11px 22px;font-size:12px;color:var(--text)!important;text-decoration:none;transition:all 0.15s;}
     .dropdown-menu a::after{display:none!important;}.dropdown-menu a:hover{background:#f5f5f5;color:var(--green)!important;}
@@ -323,7 +323,7 @@
     <h2>Ready to Schedule in Southeast Texas?</h2>
     <p>Available 7 days a week · Same-week appointments usually available · Serving the Golden Triangle since 2004</p>
     <div class="cta-actions">
-      <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" class="btn-dark">📅 BOOK INSPECTION</a>
+      <a href="contact.html" target="_blank" class="btn-dark">📅 BOOK INSPECTION</a>
       <a href="tel:4093639868" class="btn-outline">📞 CALL NOW</a>
     </div>
   </div>
