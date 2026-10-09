@@ -8,7 +8,8 @@
   <link rel="canonical" href="https://ftguinspections.com/contact">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=optional" rel="stylesheet">
   <style>
     :root {
       --green: #72867F; --blue: #74A2B1; --light-blue: #BCD9DF;
@@ -25,7 +26,7 @@
     .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:72px;}
     .nav-logo img{height:48px;width:auto;display:block;}
     .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-    .nav-links a{font-size:13px;font-weight:600;letter-spacing:0.04em;color:var(--green);text-decoration:none;transition:color 0.2s;position:relative;}
+    .nav-links a{font-size:13px;font-weight:600;letter-spacing:0.04em;color:#426354;text-decoration:none;transition:color 0.2s;position:relative;}
     .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--yellow);transform:scaleX(0);transition:transform 0.2s;border-radius:2px;}
     .nav-links a:hover::after{transform:scaleX(1);}
     .nav-links a:hover{color:var(--dark);}
@@ -44,7 +45,7 @@
     .mobile-cta-call{background:#1a1a1a !important;color:#ffffff !important;border:2px solid #1a1a1a !important;}
     .mobile-cta-book{background:#D1C787 !important;color:#1a1a1a !important;border:2px solid #D1C787 !important;}
     .page-content{padding-top:72px;}
-    .contact-hero{background:var(--green);padding:56px 40px 48px;position:relative;overflow:hidden;}
+    .contact-hero{background:#304b42;padding:56px 40px 48px;position:relative;overflow:hidden;}
     .contact-hero::before{content:'';position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 29px,rgba(255,255,255,0.5) 30px),repeating-linear-gradient(90deg,transparent,transparent 29px,rgba(255,255,255,0.5) 30px);}
     .contact-hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;text-align:center;}
     .contact-hero-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:12px;display:block;}
@@ -58,37 +59,37 @@
     .quick-item:last-child{border-right:none;}
     a.quick-item:hover{background:rgba(255,255,255,0.04);}
     .quick-icon{font-size:24px;flex-shrink:0;}
-    .quick-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:3px;}
+    .quick-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#bfbfbf;margin-bottom:3px;}
     .quick-value{font-size:15px;font-weight:700;color:white;}
     .quick-value em{color:var(--yellow);font-style:normal;}
     .scheduler-section{background:var(--off-white);padding:64px 40px;}
     .scheduler-inner{max-width:1100px;margin:0 auto;}
     .scheduler-header{text-align:center;margin-bottom:40px;}
-    .scheduler-header .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:block;}
+    .scheduler-header .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#426b79;margin-bottom:10px;display:block;}
     .scheduler-header h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--dark);line-height:1.2;}
-    .scheduler-header p{font-size:14px;color:#888;margin-top:10px;line-height:1.6;}
+    .scheduler-header p{font-size:14px;color:#666;margin-top:10px;line-height:1.6;}
     .scheduler-wrap{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,0.07);border:1px solid rgba(114,134,127,0.1);}
     .scheduler-wrap iframe{display:block;width:100%;height:1100px;border:none;}
     .expect-section{background:white;padding:72px 40px;}
     .expect-inner{max-width:1200px;margin:0 auto;}
     .expect-header{text-align:center;margin-bottom:48px;}
-    .expect-header .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:block;}
+    .expect-header .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#426b79;margin-bottom:10px;display:block;}
     .expect-header h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--dark);}
     .expect-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
     .expect-step{background:var(--off-white);padding:32px 24px;text-align:center;}
     .expect-step:first-child{border-radius:14px 0 0 14px;}
     .expect-step:last-child{border-radius:0 14px 14px 0;}
-    .step-num{font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:12px;display:block;}
+    .step-num{font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#426354;margin-bottom:12px;display:block;}
     .expect-step h3{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:8px;}
-    .expect-step p{font-size:12px;color:#888;line-height:1.6;}
+    .expect-step p{font-size:12px;color:#666;line-height:1.6;}
     .faq-section{background:var(--off-white);padding:72px 40px;}
     .faq-inner{max-width:800px;margin:0 auto;}
     .faq-header{text-align:center;margin-bottom:48px;}
-    .faq-header .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:block;}
+    .faq-header .section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#426b79;margin-bottom:10px;display:block;}
     .faq-header h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--dark);}
     .faq-item{background:white;border-radius:10px;margin-bottom:10px;border:1px solid rgba(114,134,127,0.1);}
     .faq-q{width:100%;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--dark);text-align:left;transition:color 0.2s;}
-    .faq-q:hover{color:var(--green);}
+    .faq-q:hover{color:#426354;}
     .faq-q .icon{font-size:20px;color:var(--green);flex-shrink:0;transition:transform 0.2s;margin-left:16px;}
     .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
     .faq-a.open{max-height:400px;}
@@ -100,11 +101,11 @@
     .footer-brand img{height:40px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);}
     .footer-brand p{font-size:13px;line-height:1.65;max-width:260px;margin-bottom:20px;}
     .footer-contact{display:flex;flex-direction:column;gap:8px;}
-    .footer-contact a{font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--yellow);text-decoration:none;}
-    .footer-col h4{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:16px;}
+    .footer-contact a{display:flex;align-items:center;min-height:44px;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--yellow);text-decoration:none;}
+    .footer-col h3{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:16px;}
     .footer-col ul{list-style:none;}
     .footer-col ul li{margin-bottom:8px;}
-    .footer-col ul li a{font-size:12px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+    .footer-col ul li a{display:inline-flex;align-items:center;min-height:24px;font-size:12px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
     .footer-col ul li a:hover{color:var(--yellow);}
     .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:11px;}
     .footer-creds{display:flex;gap:10px;flex-wrap:wrap;}
@@ -159,6 +160,9 @@
       .faq-q{color:#f0f0f0;}
       .faq-a-inner{color:#999;}
       .scheduler-header h2,.expect-header h2,.faq-header h2{color:#f0f0f0;}
+      .scheduler-header .section-label,.expect-header .section-label,.faq-header .section-label{color:#BCD9DF;}
+      .scheduler-header p,.expect-step p{color:#bfbfbf;}
+      .step-num,.faq-q:hover,.faq-q .icon{color:#BCD9DF;}
     }
   </style>
 <style>
@@ -173,7 +177,7 @@
 
 <nav id="mainNav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/Logo.png" alt="From The Ground Up Inspections"></a>
+    <a href="/" class="nav-logo"><img src="/Logo.png" width="520" height="160" alt="From The Ground Up Inspections"></a>
     <ul class="nav-links" id="navLinks">
       <li class="nav-dropdown">
         <a href="/services">Services &#9662;</a>
@@ -337,7 +341,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="/Logo.png" alt="From The Ground Up Inspections">
+        <img src="/Logo.png" width="520" height="160" alt="From The Ground Up Inspections">
         <p>Veteran-owned home inspection serving Southeast Texas since 2004. TREC License #7259-PI. Clear reports you can trust.</p>
         <div class="footer-contact">
           <a href="tel:4093639868">&#128222; CALL NOW</a>
@@ -345,7 +349,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="/buyers-inspection">Buyer's Inspection</a></li>
           <li><a href="/sellers-inspection">Pre-Listing Inspection</a></li>
@@ -360,7 +364,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h3>Company</h3>
         <ul>
           <li><a href="/about">About Us</a></li>
           <li><a href="/reviews">Reviews</a></li>
@@ -369,7 +373,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Service Area</h4>
+        <h3>Service Area</h3>
         <ul>
           <li><a href="/service-area">Beaumont</a></li>
           <li><a href="/service-area">Port Neches</a></li>
@@ -381,7 +385,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 From The Ground Up Inspections &middot; Port Neches, TX &middot; TREC #7259-PI &middot; <a href="tel:4093639868" style="color:var(--yellow);text-decoration:none;">(409) 363-9868</a></p>
+      <p>© 2026 From The Ground Up Inspections &middot; Port Neches, TX &middot; TREC #7259-PI &middot; <a href="tel:4093639868" style="color:var(--yellow);text-decoration:underline;">(409) 363-9868</a></p>
       <div class="footer-creds">
         <span class="cred-badge">TREC #7259-PI</span>
         <span class="cred-badge">Veteran-Owned</span>
