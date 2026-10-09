@@ -249,7 +249,7 @@
     .cred-card-icon {
       font-size:28px;margin-bottom:10px;
     }
-    .cred-card h4 {
+    .cred-card h3 {
       font-size:13px;font-weight:800;letter-spacing:0.03em;
       color:var(--dark);margin-bottom:5px;
     }
@@ -381,7 +381,7 @@
       font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
       color:var(--yellow);text-decoration:none;
     }
-    .footer-col h4 {
+    .footer-col h3 {
       font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
       color:rgba(255,255,255,0.9);margin-bottom:16px;
     }
@@ -456,7 +456,7 @@
       .nav-links { background:#0f0f0f !important; }
       .story-section { background:#181818; }
       .cred-card { background:#1a1a1a;border-color:rgba(255,255,255,0.07); }
-      .cred-card h4 { color:#f0f0f0; }
+      .cred-card h3 { color:#f0f0f0; }
       .milestone-section { background:#0f0f0f; }
       .milestone-card { background:#181818; }
       .story-text h2 { color:#f0f0f0; }
@@ -466,6 +466,47 @@
   /* Cross-device fixes */
   @media(max-width:360px){.mobile-cta-call,.mobile-cta-book{white-space:normal;text-align:center;font-size:11px;letter-spacing:.04em;padding:10px 8px;line-height:1.3;}}
   .trust-bar-inner{flex-wrap:wrap!important;justify-content:center!important;row-gap:10px;column-gap:24px;overflow:visible!important;}
+</style>
+
+<style>
+  /* Readable text and usable controls in both color schemes. */
+  .about-hero,.about-cta { background:#244b40; }
+  .about-hero-body { color:#ffffff; }
+  .about-cta-label { color:#ffffff; }
+  .about-badge { background:transparent; }
+  .btn-call { background:#1a1a1a;color:#ffffff;border-color:#ffffff; }
+  .btn-call:hover { background:#303030; }
+  .nav-links a { color:#465f55; }
+  .dropdown-menu a:hover { color:#465f55 !important; }
+  .story-text .section-label,.milestone-header .section-label { color:#386575; }
+  .cred-card p,.milestone-label { color:#626262; }
+  .milestone-number { color:#465f55; }
+  .values-section { background:#1a1a1a; }
+  .value-card p { color:#d0d0d0; }
+  .footer-col ul li a { color:#bfbfbf;display:inline-flex;align-items:center;min-height:44px; }
+  .footer-col ul li { margin-bottom:0; }
+  .footer-contact a { display:inline-flex;align-items:center;min-height:44px; }
+  .footer-bottom a { text-decoration:underline;text-underline-offset:3px; }
+  .hamburger { min-width:44px;min-height:44px;align-items:center;justify-content:center; }
+  .nav-links a { display:inline-flex;align-items:center;min-height:44px; }
+  .dropdown-menu a { display:flex; }
+  .nav-dropdown:focus-within .dropdown-menu { opacity:1;pointer-events:auto;transform:translateY(0); }
+  .dropdown-menu { visibility:hidden; }
+  .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu { visibility:visible; }
+  a:focus-visible,button:focus-visible { outline:3px solid #386575;outline-offset:4px; }
+  footer a:focus-visible,.about-hero a:focus-visible,.about-cta a:focus-visible { outline-color:#D1C787; }
+  @media(prefers-color-scheme:dark) {
+    .nav-links a { color:#bcd9df; }
+    .story-text .section-label,.milestone-header .section-label { color:#bcd9df; }
+    .cred-card p,.milestone-label { color:#bfbfbf; }
+    .milestone-number { color:#bcd9df; }
+    .floating-cta-label,.about-photo-caption { color:#1a1a1a; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    .reveal { opacity:1;transform:none;transition:none; }
+    .floating-btn { animation:none; }
+  }
 </style>
 </head>
 <body>
@@ -497,9 +538,9 @@
       <li><a href="/contact">Contact</a></li>
       <li><a href="/contact" class="nav-cta">📅 BOOK INSPECTION</a></li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <button type="button" class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </nav>
 
@@ -562,32 +603,32 @@
       <div class="cred-grid reveal">
         <div class="cred-card">
           <div class="cred-card-icon">🏅</div>
-          <h4>TREC Licensed</h4>
+          <h3>TREC Licensed</h3>
           <p>License #7259-PI. Texas Real Estate Commission licensed professional inspector.</p>
         </div>
         <div class="cred-card">
           <div class="cred-card-icon">🇺🇸</div>
-          <h4>Veteran-Owned</h4>
+          <h3>Veteran-Owned</h3>
           <p>Proud military veteran. Discipline and attention to detail carried from service into every inspection.</p>
         </div>
         <div class="cred-card">
           <div class="cred-card-icon">⭐</div>
-          <h4>400+ Google Reviews</h4>
+          <h3>400+ Google Reviews</h3>
           <p>A+ BBB accreditation. Beaumont Enterprise Readers Choice Award winner.</p>
         </div>
         <div class="cred-card">
           <div class="cred-card-icon">🎓</div>
-          <h4>InterNACHI Certified</h4>
+          <h3>InterNACHI Certified</h3>
           <p>International Association of Certified Home Inspectors. iGo Network member.</p>
         </div>
         <div class="cred-card">
           <div class="cred-card-icon">📋</div>
-          <h4>Reports Within 24 Hours</h4>
+          <h3>Reports Within 24 Hours</h3>
           <p>Full photo-documented reports delivered within 24 hours of the inspection.</p>
         </div>
         <div class="cred-card">
           <div class="cred-card-icon">📍</div>
-          <h4>8-County Coverage</h4>
+          <h3>8-County Coverage</h3>
           <p>Jefferson, Orange &amp; Hardin, plus Chambers (east), Bolivar Peninsula, Tyler, Jasper &amp; Newton.</p>
         </div>
       </div>
@@ -671,7 +712,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="/buyers-inspection">Buyer's Inspection</a></li>
           <li><a href="/sellers-inspection">Pre-Listing Inspection</a></li>
@@ -686,7 +727,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h3>Company</h3>
         <ul>
           <li><a href="/about">About Us</a></li>
           <li><a href="/reviews">Reviews</a></li>
@@ -695,7 +736,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Service Area</h4>
+        <h3>Service Area</h3>
         <ul>
           <li><a href="/service-area">Beaumont</a></li>
           <li><a href="/service-area">Port Neches</a></li>
@@ -707,7 +748,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 From The Ground Up Inspections · Port Neches, TX · TREC #7259-PI · <a href="tel:4093639868" style="color:var(--yellow);text-decoration:none;">(409) 363-9868</a></p>
+      <p>© 2026 From The Ground Up Inspections · Port Neches, TX · TREC #7259-PI · <a href="tel:4093639868" style="color:var(--yellow);text-decoration:underline;text-underline-offset:3px;">(409) 363-9868</a></p>
       <div class="footer-creds">
         <span class="cred-badge">TREC #7259-PI</span>
         <span class="cred-badge">Veteran-Owned</span>
@@ -737,7 +778,17 @@
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); });
 
   // Mobile nav
-  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+  function toggleNav() {
+    const open = document.getElementById('navLinks').classList.toggle('open');
+    const button = document.getElementById('hamburger');
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && document.getElementById('navLinks').classList.contains('open')) {
+      toggleNav(); document.getElementById('hamburger').focus();
+    }
+  });
 
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
