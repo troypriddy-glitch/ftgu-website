@@ -70,6 +70,12 @@
     .scheduler-header p{font-size:14px;color:#666;margin-top:10px;line-height:1.6;}
     .scheduler-wrap{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,0.07);border:1px solid rgba(114,134,127,0.1);}
     .scheduler-wrap iframe{display:block;width:100%;height:1100px;border:none;}
+    .booking-start{padding:48px 24px;text-align:center;}
+    .booking-start-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:16px 28px;background:#D1C787;color:#1a1a1a;border:2px solid #D1C787;border-radius:6px;font:800 15px 'Montserrat',sans-serif;cursor:pointer;}
+    .booking-start-btn:hover{background:#b8a855;border-color:#b8a855;}
+    .booking-start-btn:focus-visible{outline:3px solid #426b79;outline-offset:4px;}
+    .booking-start p{color:var(--text);font-size:14px;line-height:1.6;margin:20px auto 12px;max-width:500px;}
+    .booking-start a{display:inline-flex;align-items:center;min-height:44px;color:var(--text);font-size:13px;text-decoration:underline;}
     .expect-section{background:white;padding:72px 40px;}
     .expect-inner{max-width:1200px;margin:0 auto;}
     .expect-header{text-align:center;margin-bottom:48px;}
@@ -254,12 +260,12 @@
         <h2>Choose Your Inspection Type &amp; Date</h2>
         <p>All inspection types available. Select what you need, pick your date, and confirm. It takes about 2 minutes.</p>
       </div>
-      <div class="scheduler-wrap reveal">
-        <iframe
-          src="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule?iframe=1"
-          title="Schedule a Home Inspection with From The Ground Up Inspections"
-          loading="lazy">
-        </iframe>
+      <div class="scheduler-wrap" id="schedulerWrap">
+        <div class="booking-start" id="bookingStart">
+          <button type="button" class="booking-start-btn" id="startBooking" aria-controls="schedulerWrap">📅 Start Online Booking</button>
+          <p>Choose your inspection type and appointment date in our online scheduler.</p>
+          <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" rel="noopener">Open booking in a new tab ↗</a>
+        </div>
       </div>
     </div>
   </section>
@@ -397,6 +403,14 @@
 </footer>
 
 <script>
+  document.getElementById('startBooking').addEventListener('click',()=>{
+    const wrap=document.getElementById('schedulerWrap');
+    const frame=document.createElement('iframe');
+    frame.src='https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule?iframe=1';
+    frame.title='Schedule a Home Inspection with From The Ground Up Inspections';
+    wrap.replaceChildren(frame);
+    frame.focus();
+  });
   const bar = document.getElementById('progress-bar');
   let w = 0;
   const iv = setInterval(() => { w += Math.random()*20; if(w>=90){clearInterval(iv);w=90;} bar.style.width=w+'%'; },120);
