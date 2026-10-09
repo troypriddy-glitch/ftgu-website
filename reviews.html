@@ -8,7 +8,9 @@
   <link rel="canonical" href="https://ftguinspections.com/reviews">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=optional" rel="stylesheet"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -137,7 +139,7 @@
     .footer-brand p{font-size:13px;line-height:1.8;margin-bottom:18px;}
     .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);text-decoration:none;font-size:13px;margin-bottom:10px;transition:color 0.2s;}
     .footer-contact a:hover{color:var(--yellow);}
-    .footer-col h4{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:white;margin-bottom:18px;}
+    .footer-col h3{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:white;margin-bottom:18px;}
     .footer-col ul{list-style:none;}
     .footer-col ul li{margin-bottom:9px;}
     .footer-col ul li a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:13px;transition:color 0.2s;}
@@ -174,9 +176,43 @@
   @media(max-width:360px){.mobile-cta-call,.mobile-cta-book{white-space:normal;text-align:center;font-size:11px;letter-spacing:.04em;padding:10px 8px;line-height:1.3;}}
   .trust-bar-inner{flex-wrap:wrap!important;justify-content:center!important;row-gap:10px;column-gap:24px;overflow:visible!important;}
 </style>
+<style>
+  /* Readable colors, keyboard access, and stable initial content. */
+  .page-hero,.agent-section{background:#244b40;}
+  .page-hero-sub,.rating-count,.agent-quote,.agent-title{color:#fff;}
+  .trust-label{color:#bfbfbf;}
+  .nav-links a{color:#465f55;display:inline-flex;align-items:center;min-height:44px;}
+  .dropdown-menu{visibility:hidden;}
+  .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto;}
+  .dropdown-menu a{display:flex;}
+  .dropdown-menu a:hover{color:#465f55!important;}
+  .hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center;}
+  .section-label{color:#386575;}
+  .section-title span{color:#465f55;}
+  .review-avatar{background:#465f55;}
+  .review-avatar.blue{background:#386575;}
+  .review-avatar.brown{background:#76573f;}
+  .review-meta,.review-date,.platform-count,.platforms-sub{color:#626262;}
+  .review-stars{color:#806b22;}
+  .agent-section .review-stars{color:var(--yellow);}
+  .agent-section .section-label,.agent-section .section-title span{color:var(--yellow);}
+  .cta-eyebrow,.cta-band>div>p{color:#3a3a3a;}
+  .footer-col ul li{margin-bottom:0;}
+  .footer-col ul li a{color:#bfbfbf;display:inline-flex;align-items:center;min-height:44px;}
+  .footer-contact a{min-height:44px;}
+  .footer-bottom a{text-decoration:underline!important;text-underline-offset:3px;}
+  a:focus-visible,button:focus-visible{outline:3px solid #386575;outline-offset:4px;}
+  footer a:focus-visible,.page-hero a:focus-visible{outline-color:var(--yellow);}
+  .reveal,.reveal.visible{opacity:1;transform:none;transition:none;}
+  .floating-btn{animation:none;}
+  .floating-cta:focus-within .floating-cta-label{opacity:1;transform:none;}
+  .rating-score,.trust-num{font-variant-numeric:tabular-nums;}
+  @media(max-width:900px){.dropdown-menu{visibility:visible;}.nav-links>li>a{display:flex;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{animation:none!important;transition:none!important;}}
+</style>
 </head>
 <body>
-<div id="progress-bar"></div>
+
 <nav id="mainNav">
   <div class="nav-inner">
     <a href="/" class="nav-logo"><img src="/Logo.png" alt="From The Ground Up Inspections"></a>
@@ -201,7 +237,7 @@
       <li><a href="/contact">Contact</a></li>
       <li><a href="/contact" class="nav-cta">📅 BOOK INSPECTION</a></li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false" onclick="toggleNav()"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-cta-bar">
@@ -213,6 +249,7 @@
   <a href="/contact" class="floating-btn" title="Book Inspection">📅</a>
 </div>
 
+<main id="main-content">
 <section class="page-hero">
   <div class="page-hero-inner">
     <span class="page-hero-label">Real Reviews from Real Clients</span>
@@ -252,7 +289,7 @@
     <h2 class="platforms-title reveal">Read More Reviews</h2>
     <p class="platforms-sub reveal">Hundreds of reviews don't fit on one page. See every review on our Google profile.</p>
     <div class="platform-links">
-      <a href="https://maps.google.com/?cid=175730191474929875" target="_blank" class="platform-link reveal">
+      <a href="https://maps.google.com/?cid=175730191474929875" target="_blank" rel="noopener" class="platform-link reveal">
         <span class="platform-icon">⭐</span>
         <span class="platform-name">Google Reviews</span>
         <span class="platform-count"><span data-g-count>400+</span> Reviews · 5.0 Stars</span>
@@ -273,12 +310,13 @@
     <h2>Ready to Experience the Difference?</h2>
     <p>Available 7 days a week · Reports within 24 hours · Serving Southeast Texas since 2004</p>
     <div class="cta-actions">
-      <a href="/contact" target="_blank" class="btn-dark">📅 BOOK INSPECTION</a>
+      <a href="/contact" class="btn-dark">📅 BOOK INSPECTION</a>
       <a href="tel:4093639868" class="btn-outline">📞 CALL NOW</a>
     </div>
   </div>
 </div>
 
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -290,7 +328,7 @@
           <a href="/contact">📅 BOOK INSPECTION</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Services</h4><ul>
+      <div class="footer-col"><h3>Services</h3><ul>
         <li><a href="/buyers-inspection">Buyer's Inspection</a></li>
         <li><a href="/sellers-inspection">Pre-Listing Inspection</a></li>
         <li><a href="/new-construction-inspection">New Construction</a></li>
@@ -302,13 +340,13 @@
         <li><a href="/water-testing">Water Testing</a></li>
         <li><a href="/wdi-termite">WDI / Termite</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Company</h4><ul>
+      <div class="footer-col"><h3>Company</h3><ul>
         <li><a href="/about">About Us</a></li>
         <li><a href="/reviews">Reviews</a></li>
         <li><a href="/service-area">Service Area</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Service Area</h4><ul>
+      <div class="footer-col"><h3>Service Area</h3><ul>
         <li><a href="/service-area">Beaumont</a></li>
         <li><a href="/service-area">Port Neches</a></li>
         <li><a href="/service-area">Port Arthur</a></li>
@@ -324,14 +362,20 @@
   </div>
 </footer>
 <script>
-  const bar=document.getElementById('progress-bar');let w=0;
-  const iv=setInterval(()=>{w+=Math.random()*20;if(w>=90){clearInterval(iv);w=90;}bar.style.width=w+'%';},120);
-  window.addEventListener('load',()=>{clearInterval(iv);bar.style.width='100%';setTimeout(()=>{bar.style.opacity='0';bar.style.transition='opacity 0.4s';},300);});
   const nav=document.getElementById('mainNav');
-  window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20);});
-  function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
-  const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);observer.unobserve(entry.target);}});},{threshold:0.08});
-  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const navLinks=document.getElementById('navLinks');
+  const menuButton=document.getElementById('hamburger');
+  function updateNav(){nav.classList.toggle('scrolled',window.scrollY>20);}
+  window.addEventListener('scroll',updateNav,{passive:true});
+  updateNav();
+  function toggleNav(){
+    const open=navLinks.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded',String(open));
+    menuButton.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  }
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&navLinks.classList.contains('open')){toggleNav();menuButton.focus();}
+  });
 </script>
 <script src="/google-reviews.js" defer></script>
 </body>
