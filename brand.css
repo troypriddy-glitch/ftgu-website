@@ -79,3 +79,9 @@ footer :focus-visible,.hero :focus-visible{outline-color:#D1C787}
  .page-hero{padding-top:112px!important}
  .floating-cta{bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
 }
+
+/* Anchor the founding badge to its logo section, not the page. */
+.why-visual{position:relative;min-width:0}
+@media(max-width:900px){
+ .why-visual .why-badge{position:static!important;inset:auto!important;width:fit-content;max-width:100%;box-sizing:border-box;margin:16px auto 0;padding:16px 20px}
+}
