@@ -858,10 +858,32 @@
       text-underline-offset:3px;
     }
 </style>
-<link rel="stylesheet" href="/brand.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional"></noscript>
+<link rel="stylesheet" href="/brand.css?v=20261010-mobile-layout-3"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional"></noscript>
 <style>@media(max-width:700px){.hero{background-image:linear-gradient(to right,rgba(30,45,40,.82) 0%,rgba(30,45,40,.55) 60%,rgba(30,45,40,.35) 100%),url('/ftgu-hero-mobile.webp')}}</style>
 <link rel="preload" as="image" href="/ftgu-hero-mobile.webp" media="(max-width:700px)" fetchpriority="high">
 <link rel="preload" as="image" href="/ftgu-hero-desktop.webp" media="(min-width:701px)" fetchpriority="high">
+<style id="ftgu-mobile-layout-fix">
+/* Reserve mobile CTA space and keep the header clear. */
+@media(max-width:900px){
+ html{scroll-padding-top:88px;scroll-padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+ .mobile-cta-bar{top:auto!important;bottom:0!important;box-sizing:border-box;height:calc(72px + env(safe-area-inset-bottom,0px));padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))!important;gap:10px;align-items:stretch;border-top:1px solid rgba(0,0,0,.12);border-bottom:0;z-index:999}
+ .mobile-cta-bar a{min-width:0;min-height:44px;box-sizing:border-box;font-size:12px!important;letter-spacing:.03em!important;line-height:1.2;padding:10px 8px!important;text-align:center;white-space:normal!important}
+ .nav-mobile-call,.nav-mobile-book{display:none!important}
+ .nav-links{top:72px!important}
+ .nav-links.open{max-height:calc(100dvh - 160px - env(safe-area-inset-bottom,0px))!important}
+ .hero{padding-top:112px!important}
+ .page-hero{padding-top:112px!important}
+ .floating-cta{bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+}
+
+/* Anchor the founding badge to its logo section, not the page. */
+.why-visual{position:relative;min-width:0}
+@media(max-width:900px){
+ .why-visual .why-badge{position:static!important;inset:auto!important;width:fit-content;max-width:100%;box-sizing:border-box;margin:16px auto 0;padding:16px 20px}
+}
+
+</style>
 </head>
 <body>
 
