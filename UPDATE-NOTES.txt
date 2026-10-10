@@ -1,0 +1,17 @@
+FTGU website brand update — October 10, 2026
+
+Upload the contents of this folder to the root of your existing GitHub repository, preserving the assets and functions folders. Include brand.css and brand.js. Keep the existing Cloudflare deployment configuration.
+
+Updated all 17 HTML pages with the guide palette, official vector logo artwork, consistent menu/FAQ controls, main landmarks, readable text colors, and stable visible content. Existing link destinations and page H1 text were preserved. SVG colors were matched to the supplied PNG originals after PDF conversion. The About portrait now uses a separate cacheable image.
+
+Font exception: BC Novatica CYR Semibold files were not supplied. Headings currently use Montserrat SemiBold; body text uses Montserrat Medium. Montserrat loads from Google Fonts with a system fallback. Exact brand heading typography can be added when the licensed font files are available.
+
+Validation: 17 pages checked for duplicate IDs, main landmarks, local file references, preserved links and H1 text, JSON-LD parsing, and JavaScript syntax. No errors found in these checks. Automated tests do not establish complete accessibility compliance.
+
+Browser rendering and live PageSpeed tests were not available in this environment. After upload, inspect the navigation, FAQ controls, logos, and text on a phone and desktop, then rerun PageSpeed for each page. Performance scores can vary; this package does not guarantee the prior scores.
+
+Spectora support states that its scheduler URL cannot preselect a service and that Service ID is for reporting. Existing scheduler destinations remain in place.
+
+This package has not been deployed.
+
+Professional photo addition: six supplied photographs added across the homepage, About, buyer's inspection, and pool/spa inspection pages. Each uses 480px/960px WebP variants, descriptive alternative text, lazy loading, and reserved dimensions. No original photos were modified. The new photographs are below the opening screen; live PageSpeed and browser layout still need checking after upload.

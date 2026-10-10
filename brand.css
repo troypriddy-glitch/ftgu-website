@@ -1,0 +1,62 @@
+/* FTGU approved palette. Neutral ink maintains readable contrast. */
+:root{--green:#72867F;--blue:#74A2B1;--light-blue:#BCD9DF;--yellow:#D1C787;--brown:#B9926F;--dark:#1a1a1a;--text:#3a3a3a;--yellow-dark:#D1C787;color-scheme:light}
+body{font-family:Montserrat,Arial,sans-serif;font-weight:500;color:#3a3a3a;background:#fff}
+h1,h2,h3,h4,h5,h6,button,.nav-links a{font-family:Montserrat,Arial,sans-serif;font-weight:600!important}
+p{font-weight:500!important}
+.nav-links a,.section-label,.section-title span,.faq-arrow,.faq-q:hover,.service-card-link,.specialty-card a{color:#1a1a1a!important}
+.nav-logo{padding:10px 18px;display:inline-flex;align-items:center;flex-shrink:0}
+.nav-logo img{height:40px!important;width:120px!important;object-fit:contain;filter:none!important}
+.why-img-block{background:#fff!important;padding:40px!important}
+.why-img-block img{filter:none!important;max-width:100%;height:auto}
+.footer-brand img,.ftgu-footer-logo{filter:none!important;width:200px!important;height:auto!important;max-width:100%;padding:8px 16px;object-fit:contain}
+.ftgu-brand-green{background:#72867F!important;color:#111!important}
+.ftgu-brand-green :is(h1,h2,h3,h4,p,li,span,label,a,blockquote,div){color:#111!important}
+.ftgu-brand-green :is(.hero-card,.hero-pill,.about-badge,.dark-card,.stat-box,.stat-grid,.review-card,.reviews-bottom-cta){background:#BCD9DF!important;border-color:#1a1a1a!important}
+.ftgu-brand-green :is(.hero-checklist li::before,.section-label,.page-hero-label,.hero-card-title){color:#111!important}
+.ftgu-brand-green :is(.btn-ghost,.btn-call,.hero-cta-services){color:#111!important;border-color:#111!important;background:transparent!important}
+.ftgu-brand-green :is(.btn-dark,.cta-dark){background:#1a1a1a!important;color:#fff!important}
+.ftgu-brand-green :is(.btn-dark,.cta-dark) *{color:#fff!important}
+.nav-cta,.mobile-cta-book,.nav-mobile-book,.btn-gold,.cta-big,.hero-cta-main{background:#D1C787!important;color:#1a1a1a!important;border-color:#1a1a1a!important;font-weight:600!important}
+.nav-cta:hover,.mobile-cta-book:hover,.btn-gold:hover,.cta-big:hover,.hero-cta-main:hover{background:#D1C787!important;box-shadow:0 0 0 2px #1a1a1a!important}
+.mobile-cta-call,.nav-mobile-call{background:#1a1a1a!important;color:#fff!important}
+.cta-band :is(p,.cta-eyebrow,.cta-proof){color:#1a1a1a!important;opacity:1!important}
+.review-avatar{background:#72867F!important;color:#111!important}
+.review-avatar.blue{background:#74A2B1!important;color:#111!important}
+.review-avatar.brown{background:#B9926F!important;color:#111!important}
+.p-num,.step-num,.area-map-label,.area-city:hover,.ext-city:hover{background:#72867F!important;color:#111!important}
+.review-stars{color:#1a1a1a!important}
+.hero .review-stars,.trust-bar .review-stars,.on-dark .review-stars{color:#D1C787!important}
+footer :is(p,a){color:#d0d0d0!important}
+footer a[href^="tel:"],footer a[href^="mailto:"]{text-decoration:underline!important;text-underline-offset:3px}
+.footer-col a,.footer-contact a{display:inline-flex;min-height:44px;align-items:center}
+.footer-col h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.dropdown-menu{visibility:hidden}
+.nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{visibility:visible;opacity:1;pointer-events:auto}
+.reveal,.reveal.visible{opacity:1!important;transform:none!important;transition:none!important}
+.floating-btn{animation:none!important}
+#progress-bar{display:none!important}
+.faq-a{max-height:none!important;transition:none!important}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1a1a1a;outline-offset:4px}
+footer :focus-visible,.hero :focus-visible{outline-color:#D1C787}
+.skip-link{position:fixed;left:16px;top:-100px;z-index:10001;background:#fff;color:#111;padding:16px}
+.skip-link:focus{top:16px}
+@media(max-width:900px){.nav-links.open{max-height:calc(100dvh - 72px);overflow-y:auto}.dropdown-menu{visibility:visible}.nav-logo{padding:8px 12px}.nav-links a{min-height:44px}.footer-col a{min-height:44px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Readability on the dark values panel and review attribution. */
+.values-section .section-label,.values-section .section-title span{color:#D1C787!important}
+.values-section .section-title,.values-section h3{color:#fff!important}
+.ftgu-brand-green p,.reviews-section p{opacity:1!important}
+
+/* Professional inspection photographs, with reserved image dimensions. */
+.ftgu-photo-section{padding:64px 24px;background:#fff;color:#1a1a1a}
+.ftgu-photo-inner{max-width:1160px;margin:0 auto}
+.ftgu-photo-inner h2{font-size:clamp(26px,4vw,38px);line-height:1.2;margin:0 0 28px;color:#1a1a1a}
+.ftgu-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.ftgu-photo-grid figure{margin:0;min-width:0;background:#fff}
+.ftgu-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:3/2;border-radius:8px}
+.ftgu-photo-grid figcaption{padding:12px 0;font-size:14px;line-height:1.5;color:#3a3a3a;font-weight:500}
+.ftgu-photo-single{grid-template-columns:minmax(0,760px);justify-content:center}
+@media(max-width:700px){.ftgu-photo-section{padding:40px 24px}.ftgu-photo-grid{grid-template-columns:minmax(0,1fr);gap:20px}}
