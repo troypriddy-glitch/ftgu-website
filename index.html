@@ -15,40 +15,76 @@
     "url": "https://ftguinspections.com/",
     "telephone": "(409) 363-9868",
     "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Port Neches",
-      "addressRegion": "TX",
-      "addressCountry": "US"
+        "@type": "PostalAddress",
+        "addressLocality": "Port Neches",
+        "addressRegion": "TX",
+        "addressCountry": "US"
     },
     "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.9849,
-      "longitude": -93.9571
+        "@type": "GeoCoordinates",
+        "latitude": 29.9849,
+        "longitude": -93.9571
     },
     "areaServed": [
-      "Beaumont",
-      "Port Neches",
-      "Port Arthur",
-      "Nederland",
-      "Groves",
-      "Orange",
-      "Lumberton",
-      "Silsbee",
-      "Jasper",
-      "Newton",
-      "Woodville",
-      "Anahuac",
-      "Winnie",
-      "Crystal Beach",
-      "Kirbyville",
-      "Vidor",
-      "Bridge City",
-      "Sour Lake"
+        "Beaumont",
+        "Port Neches",
+        "Port Arthur",
+        "Nederland",
+        "Groves",
+        "Orange",
+        "Lumberton",
+        "Silsbee",
+        "Jasper",
+        "Newton",
+        "Woodville",
+        "Anahuac",
+        "Winnie",
+        "Crystal Beach",
+        "Kirbyville",
+        "Vidor",
+        "Bridge City",
+        "Sour Lake",
+        {
+            "@type": "AdministrativeArea",
+            "name": "Jefferson County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Orange County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Hardin County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Tyler County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Jasper County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Newton County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Liberty County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Chambers County, Texas"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Galveston County, Texas"
+        }
     ],
     "foundingDate": "2004",
     "alternateName": "From The Ground Up Inspections",
     "legalName": "Priddy Real Estate Services PLLC"
-  }
+}
   </script>
   <link rel="icon" type="image/svg+xml" href="/assets/brand/icon-blue-green.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,6 +594,14 @@
       display:flex; align-items:center; justify-content:center;
       font-size:48px; position:relative; overflow:hidden;
     }
+
+    .home-coverage-card{border:1px solid rgba(114,134,127,.2);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 12px 32px rgba(0,0,0,.06);}
+    .home-coverage-card .area-map{height:380px;border-radius:0;}
+    .home-coverage-caption{padding:20px 24px;color:#111;font-size:13px;line-height:1.6;}
+    .home-coverage-caption strong{font-size:15px;}
+    .home-coverage-caption p{margin:5px 0 12px;}
+    .home-coverage-caption a{color:#111;font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+    @media(max-width:700px){.home-coverage-card .area-map{height:360px;}.home-coverage-caption{padding:18px 20px;}}
     .area-map-label {
       position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
       background:var(--green); color:white; font-size:11px; font-weight:700;
@@ -910,7 +954,7 @@
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number" data-count="8" data-suffix="">8</span>
+          <span class="stat-number" data-count="9" data-suffix="">9</span>
           <span class="stat-label">Counties Served</span>
         </div>
       </div>
@@ -1021,7 +1065,7 @@
     <div class="reveal">
       <span class="section-label">Where We Work</span>
       <h2 class="section-title">Serving <em>Southeast Texas</em></h2>
-      <p class="section-body">We serve Jefferson, Orange, and Hardin Counties, plus Chambers (east side), Galveston (Bolivar Peninsula), Tyler, Jasper, and Newton Counties.</p>
+      <p class="section-body">Our primary coverage includes Jefferson, Orange, and Hardin Counties. Extended coverage includes Tyler, Jasper, Newton, Liberty, Chambers, and Galveston Counties. Call to confirm availability for your property.</p>
       <div class="area-counties">
         <div class="area-city">Beaumont</div><div class="area-city">Port Neches</div><div class="area-city">Port Arthur</div>
         <div class="area-city">Nederland</div><div class="area-city">Orange</div><div class="area-city">Lumberton</div>
@@ -1032,7 +1076,14 @@
       </div>
       <a href="/service-area" style="display:inline-block;margin-top:24px;font-size:12px;font-weight:700;color:#1a1a1a;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;">See All Communities We Serve →</a>
     </div>
-    <div class="area-map reveal"><iframe src="https://maps.google.com/maps?q=Port%20Neches%2C%20TX&amp;z=8&amp;output=embed" title="FTGU service area map: Southeast Texas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;width:100%;height:100%;display:block;" allowfullscreen></iframe><div class="area-map-label">8 Counties · Southeast Texas</div></div>
+    <div class="home-coverage-card">
+      <div class="area-map" id="home-coverage-map"></div>
+      <div class="home-coverage-caption">
+        <strong>9 Counties · Southeast Texas</strong>
+        <p>Green: primary coverage · Blue: extended coverage</p>
+        <a href="/service-area">Explore our full service area →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1178,5 +1229,26 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 <script src="/google-reviews.js" defer></script>
-<script src="/brand.js" defer></script></body>
+<script src="/brand.js" defer></script><script>
+(function(){
+ const holder=document.getElementById('home-coverage-map');
+ if(!holder)return;
+ function loadMap(){
+  if(holder.querySelector('iframe'))return;
+  const frame=document.createElement('iframe');
+  frame.src='https://www.google.com/maps/d/u/0/embed?mid=1YqAz-uYvQYX6BMcsXRArt_NplpyZkcI&ehbc=2E312F&noprof=1';
+  frame.title='FTGU primary and extended service area across nine Southeast Texas counties';
+  frame.style.cssText='display:block;width:100%;height:100%;border:0';
+  frame.setAttribute('allowfullscreen','');
+  holder.appendChild(frame);
+ }
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>{
+   if(entries.some(entry=>entry.isIntersecting)){loadMap();observer.disconnect();}
+  },{rootMargin:'0px',threshold:0.01});
+  observer.observe(holder);
+ }else{loadMap();}
+})();
+</script>
+</body>
 </html>
