@@ -65,3 +65,17 @@ footer :focus-visible,.hero :focus-visible{outline-color:#D1C787}
 .ftgu-phone-mobile{display:none!important}
 .ftgu-phone-desktop{display:inline!important;white-space:nowrap;letter-spacing:normal}
 @media(max-width:700px){.ftgu-phone-mobile{display:inline!important}.ftgu-phone-desktop{display:none!important}}
+
+/* Reserve mobile CTA space and keep the header clear. */
+@media(max-width:900px){
+ html{scroll-padding-top:88px;scroll-padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+ .mobile-cta-bar{top:auto!important;bottom:0!important;box-sizing:border-box;height:calc(72px + env(safe-area-inset-bottom,0px));padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))!important;gap:10px;align-items:stretch;border-top:1px solid rgba(0,0,0,.12);border-bottom:0;z-index:999}
+ .mobile-cta-bar a{min-width:0;min-height:44px;box-sizing:border-box;font-size:12px!important;letter-spacing:.03em!important;line-height:1.2;padding:10px 8px!important;text-align:center;white-space:normal!important}
+ .nav-mobile-call,.nav-mobile-book{display:none!important}
+ .nav-links{top:72px!important}
+ .nav-links.open{max-height:calc(100dvh - 160px - env(safe-area-inset-bottom,0px))!important}
+ .hero{padding-top:112px!important}
+ .page-hero{padding-top:112px!important}
+ .floating-cta{bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+}
