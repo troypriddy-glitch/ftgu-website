@@ -207,7 +207,7 @@
     ══════════════════════════════════ */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(to right, rgba(30,45,40,0.82) 0%, rgba(30,45,40,0.55) 60%, rgba(30,45,40,0.35) 100%), url('ftgu_hero_v4.jpg') center center / cover no-repeat;
+      background: linear-gradient(to right, rgba(30,45,40,0.82) 0%, rgba(30,45,40,0.55) 60%, rgba(30,45,40,0.35) 100%), url('/ftgu-hero-desktop.webp') center center / cover no-repeat;
       display: flex;
       align-items: center;
       position: relative;
@@ -814,7 +814,11 @@
       text-underline-offset:3px;
     }
 </style>
-<link rel="stylesheet" href="/brand.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional"></noscript></head>
+<link rel="stylesheet" href="/brand.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=optional"></noscript>
+<style>@media(max-width:700px){.hero{background-image:linear-gradient(to right,rgba(30,45,40,.82) 0%,rgba(30,45,40,.55) 60%,rgba(30,45,40,.35) 100%),url('/ftgu-hero-mobile.webp')}}</style>
+<link rel="preload" as="image" href="/ftgu-hero-mobile.webp" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="/ftgu-hero-desktop.webp" media="(min-width:701px)" fetchpriority="high">
+</head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to content</a><!-- ── NAVIGATION ── -->
