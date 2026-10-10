@@ -1,0 +1,11 @@
+FTGU SEO foundation update — October 10, 2026
+
+Upload the 16 HTML files, brand.css, and sitemap.xml into the existing GitHub repository root, replacing files with the same names. This includes the latest homepage mobile fix and service-area map/county changes. Do not upload an older patch afterward.
+
+Added static JSON-LD connecting the business, website, individual pages, 10 services, and Troy Priddy on the About page. WDI schema identifies Champion Termite & Pest Control as provider and FTGU as broker. Added visible breadcrumb navigation near the bottom of each inner page and matching breadcrumb schema. Refined unique titles and selected descriptions; added social sharing metadata. Corrected About coverage to nine counties and changed primary county card titles to H3. Updated all sitemap dates to the actual update date. Existing robots.txt already permits crawling and points to the sitemap.
+
+Local checks passed: JSON parsing and graph references; 16 unique page titles and descriptions; one H1 per page; canonical/sitemap agreement; CSS brace checks; JavaScript syntax; ZIP integrity. These checks are not Google Rich Results Test validation, a live indexing check, or a visual device test.
+
+After Cloudflare finishes deployment, test the homepage, one service page, and About in Google's Rich Results Test. Submit https://ftguinspections.com/sitemap.xml in Search Console and inspect the changed pages. Valid schema does not guarantee rankings, rich results, or inclusion in AI answers. Service schema describes services; it is not a special Google rich-result feature. No review stars or FAQ-rich-result eligibility is promised.
+
+Address limitation: only the confirmed Port Neches locality, Texas, and US are marked up. No street address, postal code, guessed coordinates, unverified opening hours, or external profile URLs were added. A complete confirmed business address may be needed for Google's LocalBusiness rich-result requirements; this patch does not claim complete eligibility. Broader accuracy review of service claims and real Search Console indexing remains separate.

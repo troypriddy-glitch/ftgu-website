@@ -85,3 +85,12 @@ footer :focus-visible,.hero :focus-visible{outline-color:#D1C787}
 @media(max-width:900px){
  .why-visual .why-badge{position:static!important;inset:auto!important;width:fit-content;max-width:100%;box-sizing:border-box;margin:16px auto 0;padding:16px 20px}
 }
+
+/* Visible page hierarchy, matching breadcrumb structured data. */
+.ftgu-breadcrumbs{max-width:1200px;margin:0 auto;padding:24px 32px;font-size:12px;color:#3a3a3a;background:#fff}
+.ftgu-breadcrumbs ol{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.ftgu-breadcrumbs li{display:flex;align-items:center;gap:8px;line-height:1.6}
+.ftgu-breadcrumbs li+li::before{content:"›";color:#3a3a3a}
+.ftgu-breadcrumbs a{color:#1a1a1a;text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+.ftgu-breadcrumbs [aria-current]{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:700px){.ftgu-breadcrumbs{padding:20px 24px}}
