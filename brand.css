@@ -60,3 +60,8 @@ footer :focus-visible,.hero :focus-visible{outline-color:#D1C787}
 .ftgu-photo-grid figcaption{padding:12px 0;font-size:14px;line-height:1.5;color:#3a3a3a;font-weight:500}
 .ftgu-photo-single{grid-template-columns:minmax(0,760px);justify-content:center}
 @media(max-width:700px){.ftgu-photo-section{padding:40px 24px}.ftgu-photo-grid{grid-template-columns:minmax(0,1fr);gap:20px}}
+
+/* Show the number on desktop and tap-to-call wording on mobile. */
+.ftgu-phone-mobile{display:none!important}
+.ftgu-phone-desktop{display:inline!important;white-space:nowrap;letter-spacing:normal}
+@media(max-width:700px){.ftgu-phone-mobile{display:inline!important}.ftgu-phone-desktop{display:none!important}}
