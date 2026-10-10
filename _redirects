@@ -10,3 +10,7 @@
 /bridge-city-tx-home-inspector /service-area 301
 /groves-tx-home-inspections/ /service-area 301
 /groves-tx-home-inspections /service-area 301
+/for-agents /buyers-inspection 301
+/for-agents/ /buyers-inspection 301
+/your-report /buyers-inspection#report-delivery 301
+/your-report/ /buyers-inspection#report-delivery 301
