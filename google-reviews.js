@@ -39,19 +39,16 @@
     );
   }
 
+  // Keep the advertised count consistent; ratings and review cards remain live.
+  document.querySelectorAll("[data-g-count]").forEach(function (el) {
+    el.removeAttribute("data-count");
+    el.removeAttribute("data-suffix");
+    el.textContent = "400+";
+  });
+
   fetch("/api/reviews")
     .then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
     .then(function (d) {
-      if (d.count) {
-        document.querySelectorAll("[data-g-count]").forEach(function (el) {
-          var n = Number(d.count).toLocaleString();
-          if (el.hasAttribute("data-count")) {
-            el.setAttribute("data-count", d.count);
-            el.setAttribute("data-suffix", "");
-          }
-          el.textContent = n;
-        });
-      }
       if (d.rating) {
         document.querySelectorAll("[data-g-rating]").forEach(function (el) {
           el.textContent = Number(d.rating).toFixed(1);
@@ -68,8 +65,7 @@
             '<a class="review-card" href="' + esc(d.url) + '" target="_blank" rel="noopener" ' +
             'style="text-decoration:none;justify-content:center;align-items:center;text-align:center;">' +
               '<div class="review-stars">★★★★★</div>' +
-              '<p class="review-text" style="font-style:normal;font-weight:700;margin-bottom:6px;">Read all ' +
-                Number(d.count).toLocaleString() + " reviews on Google →</p>" +
+              '<p class="review-text" style="font-style:normal;font-weight:700;margin-bottom:6px;">Read all 400+ Google reviews →</p>' +
               '<div class="review-date review-meta">' + Number(d.rating).toFixed(1) + " average rating</div>" +
             "</a>";
         }
