@@ -220,7 +220,8 @@
         "https://www.facebook.com/ftguhomeinspections/",
         "https://www.bbb.org/us/tx/port-neches/profile/home-inspection/from-the-ground-up-professional-home-inspections-0845-90006363",
         "https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b",
-        "https://www.nachi.org/certified-inspectors/troy-a-priddy-210139"
+        "https://www.nachi.org/certified-inspectors/troy-a-priddy-210139",
+        "https://www.youtube.com/@fromthegroundupinspections"
       ]
     },
     {
@@ -290,7 +291,7 @@
       "name": "How long does a home inspection take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most single-family homes take 2.5 to 4 hours depending on size and age. Larger homes or older properties can take longer. Commercial inspections are quoted individually."
+        "text": "Most home inspections take about 2 to 4 hours, depending on the home's size, age, condition, and any add-on services. Larger homes can take longer than 4 hours."
       }
     },
     {
@@ -336,7 +337,18 @@
   ]
 }
 </script>
-</head>
+<style id="contact-scheduler-first">
+.contact-scheduling-intro{background:#fff;padding:24px 40px 20px}
+.contact-scheduling-intro h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 12px;color:#1a1a1a}
+.contact-scheduling-intro p{font-size:15px;line-height:1.65;color:#444;margin:0}
+.contact-scheduling-intro a{color:#294b55;font-weight:700;text-underline-offset:3px}
+.scheduler-section{padding:0 40px 28px;background:#fff}
+.scheduler-wrap{border-radius:12px}
+.booking-new-tab{font-size:13px;text-align:center;margin:12px 0 0}
+.booking-new-tab a{color:#294b55;text-underline-offset:3px}
+#main-content>.ftgu-breadcrumbs{margin:0 auto;padding:18px 40px 0;max-width:1180px}
+@media(max-width:900px){.page-content{padding-top:72px!important}.contact-scheduling-intro{padding:20px 20px 18px}.scheduler-section{padding:0 0 24px}.scheduler-wrap{border-radius:0;border-left:0;border-right:0;box-shadow:none}.booking-new-tab{padding:0 16px}#main-content>.ftgu-breadcrumbs{padding:16px 20px 0}}
+</style></head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to content</a><div id="progress-bar"></div>
@@ -379,21 +391,27 @@
 </div>
 
 <main class="page-content" id="main-content">
-
-  <section class="contact-hero ftgu-brand-green">
-    <div class="contact-hero-inner">
-      <span class="contact-hero-label">Schedule Your Inspection</span>
-      <h1>Book Online.<br>Get Reports in <span>24 Hours</span>.</h1>
-      <p class="contact-hero-sub">Choose your inspection type, pick a date, and you're done. Questions before booking? Call Troy directly at <strong style="color:white;">(409) 363-9868</strong>.</p>
+<div class="ftgu-breadcrumbs" role="navigation" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Book an Inspection</span></li></ol></div>
+  <section class="contact-scheduling-intro" aria-labelledby="schedule-heading">
+    <div class="scheduler-inner">
+      <h1 id="schedule-heading">Schedule Your Inspection</h1>
+      <p>Pick your service and date below. Questions? Call us at <a href="tel:4093639868">(409) 363-9868</a>.</p>
     </div>
   </section>
-
+  <section class="scheduler-section" aria-label="Online inspection scheduler">
+    <div class="scheduler-inner">
+      <div class="scheduler-wrap" id="schedulerWrap">
+        <iframe src='https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule?iframe=1' style='border:0;height:1100px;width:100%;' title="Schedule a home inspection with From The Ground Up"></iframe>
+      </div>
+      <p class="booking-new-tab"><a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" rel="noopener">Open booking in a new tab</a></p>
+    </div>
+  </section>
   <div class="quick-contact">
     <div class="quick-contact-inner">
       <a href="tel:4093639868" class="quick-item">
         <div class="quick-icon">📞</div>
         <div>
-          <div class="quick-label">Call Troy Directly</div>
+          <div class="quick-label">Call Us</div>
           <div class="quick-value"><em>(409) 363-9868</em></div>
         </div>
       </a>
@@ -413,24 +431,6 @@
       </div>
     </div>
   </div>
-
-  <section class="scheduler-section">
-    <div class="scheduler-inner">
-      <div class="scheduler-header reveal">
-        <span class="section-label">Online Booking</span>
-        <h2>Choose Your Inspection Type &amp; Date</h2>
-        <p>Book online to choose your services and view available appointments. Enter your property details and review the total before completing your booking. For properties in our extended service area, contact FTGU to confirm coverage first.</p>
-      </div>
-      <div class="scheduler-wrap" id="schedulerWrap">
-        <div class="booking-start" id="bookingStart">
-          <button type="button" class="booking-start-btn" id="startBooking" aria-controls="schedulerWrap">📅 Start Online Booking</button>
-          <p>Choose your inspection type and appointment date in our online scheduler.</p>
-          <a href="https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule" target="_blank" rel="noopener">Open booking in a new tab ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="expect-section">
     <div class="expect-inner">
       <div class="expect-header reveal">
@@ -441,12 +441,12 @@
         <div class="expect-step reveal">
           <span class="step-num">Step 01</span>
           <h3>Book Online or Call</h3>
-          <p>Use the scheduler above or call Troy directly. Appointments are typically available within 1–2 business days.</p>
+          <p>Choose your service and date in the embedded scheduler, or call us directly. Appointments are typically available within 1–2 business days.</p>
         </div>
         <div class="expect-step reveal">
           <span class="step-num">Step 02</span>
           <h3>Confirmation Email</h3>
-          <p>You'll receive a confirmation with all appointment details. Troy is available by phone if you have pre-inspection questions.</p>
+          <p>You'll receive a confirmation with all appointment details. We're available by phone if you have pre-inspection questions.</p>
         </div>
         <div class="expect-step reveal">
           <span class="step-num">Step 03</span>
@@ -461,7 +461,6 @@
       </div>
     </div>
   </section>
-
   <section class="faq-section">
     <div class="faq-inner">
       <div class="faq-header reveal">
@@ -471,7 +470,7 @@
 
       <div class="faq-item reveal">
         <button class="faq-q" type="button" id="faq-question-1" aria-controls="faq-answer-1" aria-expanded="false">How long does a home inspection take? <span class="icon">+</span></button>
-        <div class="faq-a" id="faq-answer-1" hidden="" role="region" aria-labelledby="faq-question-1"><div class="faq-a-inner">Most single-family homes take 2.5 to 4 hours depending on size and age. Larger homes or older properties can take longer. Commercial inspections are quoted individually.</div></div>
+        <div class="faq-a" id="faq-answer-1" hidden="" role="region" aria-labelledby="faq-question-1"><div class="faq-a-inner">Most home inspections take about 2 to 4 hours, depending on the home's size, age, condition, and any add-on services. Larger homes can take longer than 4 hours.</div></div>
       </div>
 
       <div class="faq-item reveal">
@@ -501,8 +500,6 @@
 
     </div>
   </section>
-
-<div class="ftgu-breadcrumbs" role="navigation" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Book an Inspection</span></li></ol></div>
 </main>
 
 <footer>
@@ -567,14 +564,6 @@
 </footer>
 
 <script>
-  document.getElementById('startBooking').addEventListener('click',()=>{
-    const wrap=document.getElementById('schedulerWrap');
-    const frame=document.createElement('iframe');
-    frame.src='https://app.spectora.com/home-inspectors/my-inspection-company-14688b045b/schedule?iframe=1';
-    frame.title='Schedule a Home Inspection with From The Ground Up Inspections';
-    wrap.replaceChildren(frame);
-    frame.focus();
-  });
   const bar = document.getElementById('progress-bar');
   let w = 0;
   const iv = setInterval(() => { w += Math.random()*20; if(w>=90){clearInterval(iv);w=90;} bar.style.width=w+'%'; },120);
